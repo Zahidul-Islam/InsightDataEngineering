@@ -11,5 +11,8 @@ Airflow makes developing and running ETL jobs easy. However, managing high volum
 - **Automatic Service Recovery:** Airflow backend services (webserver/scheduler/workers) will be recovered automatically if they are dead or unhealthy
 - **Monitoring and alerts:** Build monitoring and alerting services that senses when a job crashes and sends the relevant information (e.g., Spark job on worker X failed in task Y)
 
+## Technologies
+`Apache Airflow`, `Apache Spark`, `AWS S3`, `PostgreSQL`, `RabbitMQ`, `Celery`, `ELK Stack`, `SLACK`
+
 ## Presentation Link
 https://docs.google.com/presentation/d/1njpTly_OViQD7EEeflJ_MYp93j7oRZzbeopk-RFcm5I/edit?usp=sharing
