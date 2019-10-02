@@ -1,4 +1,4 @@
-# λperf - Performance Optimization tool for AWS Lambda
+# λtrace - Performance Optimization tool for AWS Lambda
 
 
 
