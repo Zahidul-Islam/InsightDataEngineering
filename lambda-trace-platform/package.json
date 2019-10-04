@@ -1,0 +1,21 @@
+{
+  "name": "lambda-trace-platform",
+  "version": "1.0.0",
+  "description": "Performance Optimization tool for AWS Lambda Function",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zahidul Islam",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-offline": "^5.12.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.7.3"
+  }
+}

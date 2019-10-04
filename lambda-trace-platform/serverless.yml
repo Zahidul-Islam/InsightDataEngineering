@@ -1,0 +1,111 @@
+service: lambda-trace-platform
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-west-2
+  timeout: 900
+  role: arn:aws:iam::920141199774:role/lambda-trace-dev-us-west-2-lambdaRole
+  iamRoleStatements:
+    - Effect: Allow
+      Resource: "*"
+      Action:
+        - "lambda:InvokeFunction"
+        - "lambda:InvokeAsync"
+    - Effect: Allow
+      Resource: "*"
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+  environment:
+    # ALLOWED_MEMORY_ALLOCATION: 128,192,256,320,384,448,512,576,640,704,768,832,896,960,1024,1088,1152,1216,1280,1344,1408,1472,1536,3008
+    MEMORY_ALLOCATION: 128,256,512,1024,1536,3008
+    MIN_RAM: '128'
+    MIN_COST: '0.000000208'
+    MONGODB_URL: mongodb://lambdatrace:lambdatraceinsight@54.202.189.27:27017/lambdatraceapp
+    
+package:
+  individually: true
+  exclude:
+    - ./**
+  include:
+    - lib/**
+    - node_modules/**
+
+functions:
+  initializer:
+    handler: initializer/index.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/initializer
+          method: post
+    package:
+      include:
+        - "initializer/index.js"
+  executer:
+    handler: executer/index.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/executer
+          method: post
+    package:
+      include:
+        - "executer/index.js"
+  cleaner:
+    handler: cleaner/index.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/cleaner
+          method: post
+    package:
+      include:
+        - "cleaner/index.js"
+  functions-create:
+    handler: functions/create.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/functions
+          method: post
+    package:
+      include:
+        - "functions/create.js"
+        - "schemas/functionSchema.js"
+  functions-list:
+    handler: functions/list.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/functions
+          method: get
+    package:
+      include:
+        - "functions/list.js"
+        - "schemas/functionSchema.js"
+  functions-get:
+    handler: functions/get.handler
+    memorySize: 300
+    events:
+      - http: 
+          path: api/v1/functions/{id}
+          method: get
+    package:
+      include:
+        - "functions/get.js"
+        - "schemas/functionSchema.js"
+  fibonacci:
+    handler: example/fibonacci.handler
+    memorySize: 300
+    package:
+      include:
+        - "example/fibonacci.js"
+
+plugins:
+  - serverless-offline
+
