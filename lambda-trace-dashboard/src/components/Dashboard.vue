@@ -3,7 +3,10 @@
     <v-layout text-center wrap>
       <v-flex mb-12>
         <v-flex>
-          <v-subheader>AWS Lambda ARN - arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-dev-fibonacci</v-subheader>
+          <v-subheader
+            >AWS Lambda ARN -
+            arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-dev-fibonacci</v-subheader
+          >
         </v-flex>
         <line-chart :chartData="datacollection"></line-chart>
         <button @click="fillData()">Randomize</button>
