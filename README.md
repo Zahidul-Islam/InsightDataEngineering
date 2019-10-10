@@ -107,13 +107,13 @@ layers:
   None
 
 Stack Outputs
-FibonacciLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-fibonacci:1
-InitializerLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-initializer:1
-FunctionsDashlistLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-functions-list:1
-CleanerLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-cleaner:1
-ExecuterLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-executer:1
-FunctionsDashgetLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-functions-get:1
-FunctionsDashcreateLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:920141199774:function:lambda-trace-platform-dev-functions-create:1
+FibonacciLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-fibonacci:1
+InitializerLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-initializer:1
+FunctionsDashlistLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-functions-list:1
+CleanerLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-cleaner:1
+ExecuterLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-executer:1
+FunctionsDashgetLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-functions-get:1
+FunctionsDashcreateLambdaFunctionQualifiedArn: arn:aws:lambda:us-west-2:xxxxxxxx:function:lambda-trace-platform-dev-functions-create:1
 ServiceEndpoint: https://xxxxxxxx.execute-api.us-west-2.amazonaws.com/dev
 ServerlessDeploymentBucketName: lambda-trace-platform-de-serverlessdeploymentbuck-eebu7h0uxwpg
 
